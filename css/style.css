@@ -154,7 +154,7 @@ transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 /*header*/
 header{
-    
+    background-image: url(../img/fondheader.png);
     display: flex;
     flex-direction: column; /* Change de row (défaut) à column */
     justify-content: center;
