@@ -154,12 +154,12 @@ transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 /*header*/
 header{
+    background-image: url('img/fondheader(1).png');
     display: flex;
     flex-direction: column; /* Change de row (défaut) à column */
     justify-content: center;
     align-items: center;
     gap: 20px; /* Espace entre le h1 et le bouton */
-    background-image: url('img/fondheader(1).png');
     background-size: cover; /* Couvre tout l'espace disponible */
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Évite la répétition de l'image */
