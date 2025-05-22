@@ -154,8 +154,7 @@ transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 /*header*/
 header{
-    background-image: url('img/fondheader(1).png');
-    display: flex;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%231a73e8"/><path d="M0 50 L100 50" stroke="white" stroke-width="2"/></svg>');    display: flex;
     flex-direction: column; /* Change de row (défaut) à column */
     justify-content: center;
     align-items: center;
@@ -165,8 +164,6 @@ header{
     background-repeat: no-repeat; /* Évite la répétition de l'image */
     min-height: 400px; /* Hauteur minimale augmentée */
     width: 100%; /* Largeur complète */
-    
-
 }
 header h1{
     font-size:50px ;
