@@ -30,7 +30,7 @@ const products = [
         id: 3,
         title: "Étiquettes RFID",
         image: "img/RFID_Etiquette-removebg-preview.png",
-        price: "1500 DA",
+        price: "1400 DA",
         description: "Petite étiquette autocollante haute fréquence (HF) à fixer sur des objets comme les clés, bijoux ou sacs.",
         advantages: [
             "Très discrète",
@@ -56,7 +56,7 @@ const products = [
         id: 5,
         title: "Carte RFID",
         image: "img/RFID_carte-removebg-preview.png",
-        price: "2000 DA",
+        price: "2300 DA",
         description: "Carte fine à glisser dans un portefeuille, sac ou badge professionnel.",
         advantages: [
             "Élégante et discrète",
