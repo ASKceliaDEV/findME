@@ -108,7 +108,7 @@ const products = [
         title: "Bracelet Bluetooth",
         image: "img/Bluetooth_Bracelet-removebg-preview.png",
         price: "9 500 DA",
-        description: "Bracelet connecté pour les enfants ou les animaux domestiques.  ",
+        description: "Bracelet connecté pour les enfants ou les animaux domestiques.",
         advantages: [
             "Confortable à porter ",
             "Étanche",
