@@ -583,12 +583,274 @@ header button{
     color: #333;
 }
 
-.modal-content h2 {
-    color: #2c3e50;
-    margin-bottom: 25px;
+/* Corrections spécifiques pour le modal des packs */
+#packModal .modal-content {
+    max-width: 1000px;
+    width: 90%;
+    margin: 5vh auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#packModal .modal-body {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+#packModal .modal-image {
+    flex: 0 0 400px;
     text-align: center;
 }
 
+#packModal .modal-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#packModal .modal-details {
+    flex: 1;
+    min-width: 0; /* Permet au flex item de se rétrécir */
+}
+
+#packModal .modal-details h2 {
+    color: #00ace2;
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+#packModal .pack-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+#packModal .pack-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #00ace2;
+}
+
+#packModal .pack-content-title {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#packModal #modalPackContent {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+#packModal #modalPackContent li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.5;
+}
+
+#packModal #modalPackContent li:last-child {
+    border-bottom: none;
+}
+
+/* Style pour les éléments qui commencent par un chiffre */
+#packModal #modalPackContent li:not([style*="color: #27ae60"]):not([style*="color: #e74c3c"])::before {
+    content: "✓";
+    color: #00ace2;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+/* Amélioration des boutons du pack */
+#packModal .pack-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+#packModal .add-pack-to-cart,
+#packModal .add-all-items-to-cart {
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#packModal .add-pack-to-cart {
+    background: linear-gradient(135deg, #ff8c00, #ff6347);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+}
+
+#packModal .add-pack-to-cart:hover {
+    background: linear-gradient(135deg, #ff7f00, #ff4500);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+}
+
+#packModal .add-all-items-to-cart {
+    background: linear-gradient(135deg, #17e5e5, #00ace2);
+    color: white;
+    box-shadow: 0 4px 15px rgba(23, 229, 229, 0.3);
+}
+
+#packModal .add-all-items-to-cart:hover {
+    background: linear-gradient(135deg, #14c7c7, #0088b3);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(23, 229, 229, 0.4);
+}
+
+/* Responsive pour le modal des packs */
+@media (max-width: 768px) {
+    #packModal .modal-content {
+        width: 95%;
+        margin: 2vh auto;
+        padding: 20px;
+    }
+    
+    #packModal .modal-body {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    #packModal .modal-image {
+        flex: none;
+        width: 100%;
+    }
+    
+    #packModal .modal-image img {
+        max-width: 300px;
+    }
+    
+    #packModal .modal-details h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    #packModal .pack-buttons {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #packModal .modal-content {
+        width: 98%;
+        padding: 15px;
+    }
+    
+    #packModal .modal-details h2 {
+        font-size: 20px;
+    }
+    
+    #packModal .pack-price {
+        font-size: 20px;
+    }
+    
+    #packModal .pack-description {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    #packModal .add-pack-to-cart,
+    #packModal .add-all-items-to-cart {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Amélioration de l'animation du modal */
+#packModal.show .modal-content {
+    animation: packModalSlideIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes packModalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Style pour le bouton de fermeture du modal pack */
+#packModal .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #999;
+    z-index: 10;
+    transition: all 0.2s ease;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+#packModal .close-btn:hover {
+    color: #e74c3c;
+    background-color: #f8f8f8;
+    transform: rotate(90deg);
+}
+
+/* Correction pour les cartes de pack dans la page principale */
+.pack-card {
+    position: relative;
+    overflow: visible; /* Permet aux tooltips d'être visibles */
+}
+
+.pack-card .pack-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.pack-card .pack-button::before {
+    content: "Voir les détails";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0088b3, #14c7c7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.pack-card:hover .pack-button::before {
+    transform: translateY(0);
+}
 .offer-option {
     background-color: #f8f9fa;
     padding: 20px;

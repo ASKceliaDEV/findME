@@ -4,7 +4,7 @@ const products = [
         id: 1,
         title: "Porte-clés Bluetooth",
         image: "img/Bluetooth_Porte-clé.png",
-        price: "3000 DA",
+        price: "7500 DA",
         description: "Ce porte-clés Bluetooth vous permet de localiser vos objets perdus via une application mobile. Portée de 50m, batterie longue durée.",
         advantages: [
             "Portée de 50 mètres",
